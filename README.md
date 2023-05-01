@@ -7,6 +7,6 @@ Usage:
 ```python
 from cmpe255gp1.kmeans import KMeans
 X = df #some dataframe
-model = KMeans(num_cluster=3, max_iter=30)
+model = KMeans(n_clusters=3, max_iter=30)
 model.fit(X)
 ```
