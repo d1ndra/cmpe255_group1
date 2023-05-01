@@ -1,7 +1,16 @@
 #Note: This contains the PCA classes from the 255 final project.
-# PCA 1 Alex Zaliznyak
-# Custom PCA class which has methods for transforming, inverse transforming, and getting loadings (essentially components)
+# PCA  Alex
+
+# #1 - Custom PCA class which has methods for transforming, inverse transforming, and getting loadings (essentially components)
 # Note: some normalization issues could be addressed but it all works
+
+from matplotlib.lines import Line2D
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+
 class MPCA:
     # Note: can change n_components = None for a selection based on variable per cent of variance explained
     def __init__(self, n_components=1):
@@ -104,7 +113,7 @@ class LinearRegressionGD:
         return y_pred
 
 
-# PCA 2 Alex Zaliznyak
+# #2 - PCA  Regression
 # Note: I had some trouble with the normalizations but this seems to work well.
 # The problem is that the data has to be normalized for the PCA to run but then
 # denormalized to get predictions and this was giving me some trouble.
@@ -181,7 +190,7 @@ class PCALinearRegression:
         return r_squared
 
 
-# PCA 4 Alex Zaliznyak
+# #3 - PCA Outliers
 # Finding Outliers
 # This is a class that extends MPCA that provides a handy framework for outlier detection using PCA
 # as it performs the principal component analysis and then returns information about the outliers
