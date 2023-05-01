@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
-from cmpe_255_gp1 import __version__
+from cmpe255gp1 import __version__
 
 setup(
-    name='cmpe_255_gp1',
+    name='cmpe255gp1',
     version=__version__,
 
     url='https://github.com/d1ndra/cmpe255_group1',
