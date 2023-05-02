@@ -271,20 +271,3 @@ class OutPCA(MPCA):
         return sorted_indices
 
 
-# Create an OutPCA object
-myoutliers = OutPCA(n_components=5)
-myoutliers.fit_transform(X_normalized)
-myoutliers.plot_outliers(X_normalized)
-
-n_highest_outliers = 5
-
-# Get outlier indices
-outlier_indices = myoutliers.get_n_highest_outliers(X_normalized, n=n_highest_outliers)
-print(outlier_indices)
-merged_df.iloc[outlier_indices]
-# set max rows and columns to None
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
-
-outlier_points = merged_df.iloc[outlier_indices]
-print(outlier_points)
